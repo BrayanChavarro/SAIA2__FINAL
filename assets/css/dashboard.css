@@ -6,7 +6,6 @@
 
 body{
     background: #EAEBEF;
-
 }
 .nav{
     width: 300px;
@@ -101,4 +100,13 @@ body{
     list-style: none;
     transition: height .4s;
     height: 0;
+}
+
+.embed-container {
+    display: flex;
+    height: auto;
+    width: auto;
+}
+.embed-container iframe {
+    
 }
