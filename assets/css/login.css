@@ -129,6 +129,7 @@ body{
     padding: 10px 25px;
     border-radius: 24px;
     transition: 0.5s;
+    border-color: #03A9F4 ;
 }
 .button__login:hover{
     color: #FFFFFF;
