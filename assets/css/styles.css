@@ -363,7 +363,9 @@ body{
 }
 
 .modal__label{
+    display: grid;
     color: #0087ff;
+    grid-template-columns: repeat(2,1fr);
 }
 
 .modal__input{
@@ -381,18 +383,35 @@ body{
     margin-bottom: 10px;
 }
 
-.modal__select{
-    color: #03A9F4;
-    outline: none;
-}
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0;
+    background: #0087FF;
+    flex: 1;
+    color:#fff;
+    cursor:pointer;
+    font-size: 1em;
+ }
+ 
+ select::-ms-expand {
+    display: none;
+ }
 
-.modal__select:hover{
-    color: #0060DF;
-    background-color: #fff;
-    transition: .5s;
-    outline: none;
-}
-
+ .modal__select {
+    position: relative;
+    display: flex;
+    width: 2em;
+    height: 2em;
+    background: #0087FF;
+    overflow: hidden;
+    border-radius: .25em;
+ }
+ 
 .modal__close{
     text-decoration: none;
     color: #fff;
@@ -420,29 +439,29 @@ body{
     padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5em;
+    gap: 1.5em;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .menu__element{
-    background-color: #0060DF;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border-radius: 10px;
+    border: 1px solid #0087FF;
     width: 200px;
     height: 300px;
     padding: 40px;
-    --color-plan: #fff;
-    --color-price: #0087ff;
     --bg-cta: #fff;
-    --color-cta: #5454d4;
-    --color-items: #696871;
 }
 
 .menu__name{
     color: var(--color-plan);
     margin-bottom: 15px;
     font-weight: 300;
+    color: #03A9F4;
 }
 
 
@@ -461,8 +480,14 @@ body{
     padding: 20px 0;
     border-radius: 10px;
     text-decoration: none;
-    background-color: var(--bg-cta);
+    background-color: #0087FF;
     font-weight: 600;
-    color: avr (--color-cta);
+    color: #fff;
     box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+.menu__cta:hover{
+    background-color: #fff;
+    color: #0087FF;
 }
