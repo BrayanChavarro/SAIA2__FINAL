@@ -435,6 +435,7 @@ select {
 }
 
 .table__menu{
+    margin: auto;
     padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
