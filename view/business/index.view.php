@@ -12,7 +12,7 @@
 <body>
     <div class="div__container__login__ingreso">
         <di class="contianer__prueba__login__ingreso">
-            <form action="view/business/dashboard.html" class="form__login__login__ingreso" method="GET">
+            <form action="view/business/dashboard.php" class="form__login__login__ingreso" method="GET">
                 <h1 class="titlle__login">¡Bienvenido!</h1>
                 <img src="assets/img/logoSAIA.png" class="logo__img__login__ingreso">
                 <label name="Login" class="form__input__login__ingreso">Usuario</label>

@@ -19,7 +19,7 @@
                 <li class="list__items__menu__lateral">
                     <div class="list__button__menu__lateral list__button--click">
                         <img src="../../assets/img/users.svg" class="list__img icons">
-                        <a href="#" class="nav__link__menu__lateral">Usuarios</a>
+                        <a href="../modules/usuario.php" class="nav__link__menu__lateral">Usuarios</a>
                         <!-- <img src="../../assets/img/arrow.svg" class="list__arrow__menu__lateral icons"> -->
                         
                     </div>
@@ -93,7 +93,7 @@
         </ul>
     </nav>
     <div class="embed__container__menu__lateral">
-        <iframe src="menu.html" id="iframe">
+        <iframe src="menu.php" id="iframe">
         </iframe>
     </div>    
 </body>

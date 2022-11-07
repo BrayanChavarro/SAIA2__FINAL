@@ -14,7 +14,7 @@
         <div class="menu__element">
             <img src="../../assets/img/users.svg" class="img__user">
             <p class="menu__name">Usuario</p>
-            <a href="../modules/usuario.html" class="menu__cta">Abrir</a>
+            <a href="../modules/usuario.php" class="menu__cta">Abrir</a>
         </div>
         
 
