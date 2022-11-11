@@ -3,7 +3,7 @@ include_once '../../bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
-$consulta = "SELECT id, nombre, apellidos, cedula, correo FROM Usuarios";
+$consulta = "SELECT documento, nombres, apellidos, email, telefono FROM Usuarios";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -12,7 +12,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en">
 <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8">
+    <meta charset="utf8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/normalize.css">
@@ -49,11 +49,12 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                         <table id="tablaPersonas" class="table table-striped" style="width:100%">
                         <thead class="text-center">
                             <tr class="bg-primary text-light">
-                                <th>Id</th>
-                                <th>Nombre</th>
-                                <th>Apellidos</th>                                
-                                <th>Cedula</th>  
-                                <th>Correo</th>  
+                                <th>Documento</th>
+                                <th>Apellidos</th>
+                                <th>Nombres</th>                                
+                                <th>Email</th>  
+                                <th>Contraseña</th>  
+                                <th>Telefono</th>  
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -62,11 +63,13 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                             foreach($data as $dat) {                                                        
                             ?>
                             <tr>
-                                <td><?php echo $dat['id'] ?></td>
-                                <td><?php echo $dat['nombre'] ?></td>
+                                <td><?php echo $dat['documento'] ?></td>
                                 <td><?php echo $dat['apellidos'] ?></td>
-                                <td><?php echo $dat['cedula'] ?></td>    
-                                <td><?php echo $dat['correo'] ?></td>    
+                                <td><?php echo $dat['nombres'] ?></td>
+                                <td><?php echo $dat['email'] ?></td>    
+                                <td><?php echo $dat['contraseña'] ?></td>    
+                                <td><?php echo $dat['telefono'] ?></td>
+
                                 <td></td>
                             </tr>
                             <?php
@@ -84,25 +87,25 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <h5 class="modal-title1" id="exampleModalLabel">Nuevo Usuario</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
-        <form id="formPersonas">    
+        <form action="../../bd/crud.php" method="post">    
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="nombre" class="col-form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre">
-                </div>
-                <div class="form-group">
-                    <label for="pais" class="col-form-label">Apellidos:</label>
+                    <label for="Documento" class="col-form-label">Documento:</label>
+                    <input type="text" class="form-control" id="documento">
+                    <label for="Apellidos" class="col-form-label">Apellidos:</label>
                     <input type="text" class="form-control" id="apellidos">
-                </div>                
-                <div class="form-group">
-                    <label for="edad" class="col-form-label">Cedula:</label>
-                    <input type="text" class="form-control" id="cedula">
-                    <label for="edad" class="col-form-label">Correo:</label>
-                    <input type="text" class="form-control" id="correo">
+                    <label for="Nombres" class="col-form-label">Nombres:</label>
+                    <input type="text" class="form-control" id="nombres">
+                    <label for="email" class="col-form-label">Email:</label>
+                    <input type="text" class="form-control" id="email">
+                    <label for="Contraseña" class="col-form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="contraseña">
+                    <label for="Telefono" class="col-form-label">Telefono:</label>
+                    <input type="number" class="form-control" id="telefono">
                 </div>            
             </div>
             <div class="modal-footer">

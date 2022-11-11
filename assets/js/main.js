@@ -37,18 +37,20 @@ $("#btnNuevo").click(function(){
 var fila; //capturar la fila para editar o borrar el registro
     
 //botón EDITAR    
-$(document).on("click", ".btnEditar", function(){
+ $(document).on("click", ".btnEditar", function(){
     fila = $(this).closest("tr");
     id = parseInt(fila.find('td:eq(0)').text());
     nombre = fila.find('td:eq(1)').text();
     apellidos = fila.find('td:eq(2)').text();
-    cedula = parseInt(fila.find('td:eq(3)').text());
-    correo = fila.find('td:eq(2)').text();
+    documento = parseInt(fila.find('td:eq(3)').text());
+    email = fila.find('td:eq(2)').text();
     
-    $("#nombre").val(nombre);
+    $("#documento").val(documento);
     $("#apellidos").val(apellidos);
-    $("#cedula").val(cedula);
-    $("#correo").val(correo);
+    $("#nombre").val(nombre);
+    $("#email").val(email);
+    $("#contraseña").val(contraseña);
+    $("#telefono").val(telefono);
     opcion = 2; //editar
     
     $(".modal-header").css("background-color", "#007bff");
@@ -75,27 +77,32 @@ $(document).on("click", ".btnBorrar", function(){
             }
         });
     }   
-});
-    
+}); 
+  
 $("#formPersonas").submit(function(e){
     e.preventDefault();    
-    nombre = $.trim($("#nombre").val());
+    documento = $.trim($("#documento").val());    
     apellidos = $.trim($("#apellidos").val());
-    cedula = $.trim($("#cedula").val());    
+    nombre = $.trim($("#nombre").val());
+    email = $.trim($("#email").val());    
+    contraseña = $.trim($("#contraseña").val());    
+    telefono = $.trim($("#telefono").val());
     $.ajax({
         url: "../../bd/crud.php",
         type: "POST",
         dataType: "json",
-        data: {nombre:nombre, apellidos:apellidos, cedula:cedula, id:id, correo:correo, opcion:opcion},
+        data: {documento:documento, apellidos:apellidos, nombre:nombre, id:id, email:email, contraseña:contraseña, telefono:telefono, opcion:opcion},
         success: function(data){  
-            console.log(data);
+            var datos = JSON.parse(data);
             id = data[0].id;            
-            nombre = data[0].nombre;
+            documento = data[0].documento;
             apellidos = data[0].apellidos;
-            cedula = data[0].cedula;
-            correo = data[0].correo;
-            if(opcion == 1){tablaPersonas.row.add([id,nombre,apellidos,cedula,correo]).draw();}
-            else{tablaPersonas.row(fila).data([id,nombre,apellidos,cedula,correo]).draw();}            
+            nombre = data[0].nombre;
+            email = data[0].email;
+            contraseña = data[0].contraseña;
+            telefono = data[0].telefono;
+            if(opcion == 1){tablaPersonas.row.add([id,documento,apellidos,nombre,email,contraseña,telefono]).draw();}
+            else{tablaPersonas.row(fila).data([id,documento,apellidos,nombre,email,contraseña,telefono]).draw();}            
         }        
     });
     $("#modalCRUD").modal("hide");    

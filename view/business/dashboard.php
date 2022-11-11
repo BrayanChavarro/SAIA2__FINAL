@@ -99,6 +99,5 @@
 </body>
 <footer>
     <script src="../../assets/js/mainsidebar.js"></script>
-    <script src="../../assets/js/modal_usuario.js"></script>
 </footer>
 </html>
