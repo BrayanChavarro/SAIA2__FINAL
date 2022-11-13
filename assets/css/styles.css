@@ -4,6 +4,7 @@ body{
     padding: 0;
     display: flex;
     height: 100vh;
+    width: 100%;
     background: #EAEBEF;
     overflow: hidden;
 }
@@ -430,64 +431,59 @@ select {
 
 /* Menu Principal de las vistas */
 
-.menu{
-    text-align: center;
-}
+    .table__menu{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        align-items: center;
+        min-width: 100%;
+        overflow: auto;
+    }
 
-.table__menu{
-    margin: auto;
-    padding-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    .menu__element{
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid #0087FF;
+        width: 150px;
+        height: 250px;
+        padding: 40px;
+        --bg-cta: #fff;
+    }
 
-.menu__element{
-    background-color: #fff;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #0087FF;
-    width: 150px;
-    height: 250px;
-    padding: 40px;
-    --bg-cta: #fff;
-}
+    .menu__name{
+        color: var(--color-plan);
+        margin-bottom: 15px;
+        font-weight: 300;
+        color: #03A9F4;
+    }
 
-.menu__name{
-    color: var(--color-plan);
-    margin-bottom: 15px;
-    font-weight: 300;
-    color: #03A9F4;
-}
+    .menu__items{
+        margin-top: 35px;
+        display: grid;
+        gap: 1em;
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+        color: var(--color-items);
+    }
 
+    .menu__cta{
+        display: block;
+        padding: 20px 0;
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: #0087FF;
+        font-weight: 600;
+        color: #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+        transition: .5s;
+    }
 
-.menu__items{
-    margin-top: 35px;
-    display: grid;
-    gap: 1em;
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin-bottom: 50px;
-    color: var(--color-items);
-}
-
-.menu__cta{
-    display: block;
-    padding: 20px 0;
-    border-radius: 10px;
-    text-decoration: none;
-    background-color: #0087FF;
-    font-weight: 600;
-    color: #fff;
-    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
-    transition: .5s;
-}
-
-.menu__cta:hover{
-    background-color: #fff;
-    color: #0087FF;
-}
+    .menu__cta:hover{
+        background-color: #fff;
+        color: #0087FF;
+    }

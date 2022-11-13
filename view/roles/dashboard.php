@@ -13,14 +13,14 @@
     <nav class="nav__menu__lateral">
         <ul class="list__menu__lateral">
             <div class="div__logo__menu__lateral">
-                <a href=""><img src="../../assets/img/imglogo/logoSAIA.png" class="logo__menu__lateral"></a>
+                <a href=""><img src="../../assets/img/logoSAIA.png" class="logo__menu__lateral"></a>
             </div>
             <div class="div__menu__lateral">
                 <li class="list__items__menu__lateral">
                     <div class="list__button__menu__lateral list__button--click">
-                        <img src="../../assets/img/svg/users.svg" class="list__img icons">
-                        <a href="../modules/usuario.php" class="nav__link__menu__lateral">Usuarios</a>
-                        <!-- <img src="../../assets/img/svg/arrow.svg" class="list__arrow__menu__lateral icons"> -->
+                        <img src="../../assets/img/users.svg" class="list__img icons">
+                        <a href="../modules/users/usuario.php" class="nav__link__menu__lateral">Usuarios</a>
+                        <!-- <img src="../../assets/img/arrow.svg" class="list__arrow__menu__lateral icons"> -->
                         
                     </div>
                    <!--  <ul class="list__show__menu__lateral">
@@ -40,7 +40,7 @@
                     <div class="list__button__menu__lateral list__button--click">
                         <img src="../../assets/img/ingreso.svg" class="list__img__menu__lateral icons">
                         <a href="#" class="nav__link__menu__lateral">Entrada</a>
-                        <img src="../../assets/img/svg/arrow.svg" class="list__arrow__menu__lateral icons">
+                        <img src="../../assets/img/arrow.svg" class="list__arrow__menu__lateral icons">
                     </div>
 
                     <ul class="list__show__menu__lateral">
@@ -65,7 +65,7 @@
 
                 <li class="list__items__menu__lateral">
                     <div class="list__button__menu__lateral list__button--click">
-                        <img src="../../assets/img/svg/salida.svg" class="list__img__menu__lateral icons">
+                        <img src="../../assets/img/salida.svg" class="list__img__menu__lateral icons">
                         <a href="#" class="nav__link__menu__lateral">Compra y Venta</a>
                         <img src="../../assets/img/arrow.svg" class="list__arrow__menu__lateral icons">
                     </div>
@@ -85,11 +85,29 @@
 
                 <li class="list__items__menu__lateral">
                  <!--    <di class="list__button__menu__lateral">
-                        <img src="../../assets/img/svg/estadisticas.svg" class="list__img__menu__lateral">
+                        <img src="../../assets/img/estadisticas.svg" class="list__img__menu__lateral">
                         <a href="#" class="nav__link__menu__lateral">Estadisticas</a>
                     </di> -->
                 </li>
+                <li class="list__items__menu__lateral">
+                    <div class="list__button__menu__lateral list__button--click">
+                        <img src="../../assets/img/empleado.svg" class="list__img icons">
+                        <a href="../modules/users/usuario.php" class="nav__link__menu__lateral">Empleados</a>
+                    </div>
+                   <!--  <ul class="list__show__menu__lateral">
+                        <li class="list__inside__menu__lateral">
+                            <a href="" class="nav__link__menu__lateral nav__link--inside">Registrar</a>
+                        </li>
+                        <li class="list__inside__menu__lateral">
+                            <a href="" class="nav__link__menu__lateral nav__link--inside">Actualizar</a>
+                        </li>
+                        <li class="list__inside__menu__lateral">
+                            <a href="" class="nav__link__menu__lateral nav__link--inside">Consultar</a>
+                        </li>
+                    </ul> -->
+                </li>
             </div>
+               
         </ul>
     </nav>
     <div class="embed__container__menu__lateral">

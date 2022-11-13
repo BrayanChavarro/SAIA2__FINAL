@@ -1,5 +1,5 @@
 <?php
-include_once '../../bd/conexion.php';
+include_once '../../../bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
@@ -15,19 +15,19 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="utf8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/normalize.css">
-    <link rel="stylesheet" href="../../assets/webfonts/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../../assets/webfonts/fonts.css">
     <title>Usuarios</title>
       
     <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
     <!-- CSS personalizado --> 
-        <link rel="stylesheet" href="../../assets/css/normalize.css">
-        <link rel="stylesheet" href="../../assets/webfonts/fonts.css">
+        <link rel="stylesheet" href="../../../assets/css/normalize.css">
+        <link rel="stylesheet" href="../../../assets/webfonts/fonts.css">
     <!--datables CSS básico-->
-        <link rel="stylesheet" type="text/css" href="../../assets/datatables/datatables.min.js"/>
+        <link rel="stylesheet" type="text/css" href="../../../assets/datatables/datatables.min.js"/>
     <!--datables estilo bootstrap 4 CSS-->  
-        <link rel="stylesheet"  type="text/css" href="../../datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">       
+        <link rel="stylesheet"  type="text/css" href="../../../datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">       
     <!-- sweetalert2 css -->
     <link rel="stylesheet" href="../../plugins/sweetalert2/sweetalert2.min.css">
     </head>
@@ -52,8 +52,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                 <th>Documento</th>
                                 <th>Apellidos</th>
                                 <th>Nombres</th>                                
-                                <th>Email</th>  
-                                <th>Contraseña</th>  
+                                <th>Email</th>   
                                 <th>Telefono</th>  
                                 <th>Acciones</th>
                             </tr>
@@ -66,8 +65,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?php echo $dat['documento'] ?></td>
                                 <td><?php echo $dat['apellidos'] ?></td>
                                 <td><?php echo $dat['nombres'] ?></td>
-                                <td><?php echo $dat['email'] ?></td>    
-                                <td><?php echo $dat['contraseña'] ?></td>    
+                                <td><?php echo $dat['email'] ?></td>     
                                 <td><?php echo $dat['telefono'] ?></td>
 
                                 <td></td>
@@ -91,7 +89,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
-        <form action="../../bd/crud.php" method="post">    
+        <form action="../../../bd/crud.php" method="post">    
             <div class="modal-body">
                 <div class="form-group">
                     <label for="Documento" class="col-form-label">Documento:</label>
@@ -118,16 +116,16 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 </div>  
       
     <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="../../jquery/jquery-3.3.1.min.js"></script>
-    <script src="../../popper/popper.min.js"></script>
-    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../jquery/jquery-3.3.1.min.js"></script>
+    <script src="../../../popper/popper.min.js"></script>
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
       
     <!-- datatables JS -->
-    <script type="text/javascript" src="../../assets/datatables/datatables.min.js"></script>    
+    <script type="text/javascript" src="../../../assets/datatables/datatables.min.js"></script>    
      
-    <script type="text/javascript" src="../../assets/js/main.js"></script>  
+    <script type="text/javascript" src="../../../assets/js/main.js"></script>  
     <!-- sweetalert2 js -->
-    <script src="../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../../../plugins/sweetalert2/sweetalert2.all.min.js"></script>
 </div>   
   </body>
 </html>
