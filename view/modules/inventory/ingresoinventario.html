@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="">
-        <label for="">Ingreso de unidades<input type="text"></label>
-        <input type="button" value="submit">
-        
-    </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../../assets/webfonts/fonts.css" />
+    <!-- <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.css"> -->
+    <title>Almacen de Invantario</title>
+  </head>
+  <body>
+    <div class="container__invantario">
+        <div class="div__container__invantario">
+            <div class="contenedor__form__invantario">
+                <label name="Codigo" class="form__label__inventarios">Codigo:</label>
+                    <input type="text" placeholder="Ingrese Codigo" class="form__input__inventario"/>
+                <label name="Nombre" class="form__label__inventarios">Nombre:</label>
+                    <input type="text" placeholder="Ingrese Nombre" class="form__input__inventario"/>
+                <label name="Marca" class="form__label__inventarios">Marca:</label>
+                    <input type="text" placeholder="Ingrese Marca" class="form__input__inventario"/>
+                <label name="Referencia" class="form__label__inventarios">Referencia:</label>
+                    <input type="text" placeholder="Ingrese Referencia" class="form__input__inventario"/>
+                <label name="Tipo" class="form__label__inventarios">Tipo:</label>
+                    <input type="text" placeholder="Ingrese Tipo" class="form__input__inventario"/>
+                <label name="Cantidad" class="form__label__inventarios">Cantidad:</label>
+                    <input type="text" placeholder="Ingrese Cantidad" class="form__input__inventario"/>
+                <input type="submit"value="Ingresar"class="button__invantario"/>
+            </div>
+            <div class="databale__invantario">
+                <table class="table__ejemplo">
+                    <table class="table__ejemplo">
+                        <tr>
+                          <th>REFERENCIA</th>
+                          <th>TIPO</th>
+                          <th>CANTIDAD</th>
+                          <th>MARCA</th>
+                        </tr>
+                        <tr>
+                          <td>Aceite</td>
+                          <td>Aceite</td>
+                          <td>Parcialmente nublado</td>
+                          <td>Parcialmente nublado</td>
+                        </tr>
+                        <tr>
+                          <td>Grasa</td>
+                          <td>Refrigerante</td>
+                          <td>12°C</td>
+                          <td>12°C</td>
+                        </tr>
+                        <tr>
+                          <td>E 13 km/h</td>
+                          <td>E 11 km/h</td>
+                          <td>S 16 km/h</td>
+                          <td>S 16 km/h</td>
+                        </tr>
+                      </table>
+                </table>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

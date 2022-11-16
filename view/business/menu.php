@@ -13,29 +13,29 @@
     
     <div class="table__menu">
         <div class="menu__element">
-            <img src="../../assets/img/svg/users.svg" class="img__user">
+            <img src="../../assets/img/users.svg" class="img__user">
             <p class="menu__name">Usuario</p>
             <a href="../modules/usuario.php" class="menu__cta">Abrir</a>
         </div>
     
         <div class="menu__element">
-            <img src="../../assets/img/svg/Inventario.svg" class="img__user">
+            <img src="../../assets/img/Inventario.svg" class="img__user">
             <p class="menu__name">Inventario</p>
-            <a href="../modules/inventory/menuinventrio.view.php" class="menu__cta">Abrir</a>
+            <a href="modules/inventory/menuinventrio.view.html" class="menu__cta">Abrir</a>
         </div>
         
         <div class="menu__element">
-            <img src="../../assets/img/svg/Reposrtes.svg" class="img__user">
+            <img src="../../assets/img/Reposrtes.svg" class="img__user">
             <p class="menu__name">Reportes</p>
             <a href="#" class="menu__cta">Abrir</a>
         </div>
         <div class="menu__element">
-            <img src="../../assets/img/svg/ventas.svg" class="img__user">
+            <img src="../../assets/img/ventas.svg" class="img__user">
             <p class="menu__name">Ventas</p>
             <a href="#" class="menu__cta">Abrir</a>
         </div>
         <div class="menu__element">
-            <img src="../../assets/img/svg/Comprar.svg" class="img__user">
+            <img src="../../assets/img/Comprar.svg" class="img__user">
             <p class="menu__name">Comprar</p>
             <a href="#" class="menu__cta">Abrir</a>
         </div>
